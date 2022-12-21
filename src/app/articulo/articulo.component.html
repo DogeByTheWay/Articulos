@@ -1,10 +1,4 @@
-{{mensaje()}}
-<button class="btn btn-success" (click)="cambiaEstado()">HABILITADOR O DESHABILITADOR DE COMPRA</button>
-<button class="btn btn-warning" (click)="cambiaArticulo()">CAMBIADOR DE ARTICULO</button>
-
-<input type="text" [(ngModel)]="nombre">
-
-<div class="row">
+<!--<div class="row">
 
 <div class="card col-4" *ngFor="let articulo of articulos" [id]="articulo.id" style="width: 18rem;">
     <img src="assets/{{articulo.id}}.jpg" class="card-img-top">
@@ -15,13 +9,6 @@
             <p class="card-text text-center">{{articulo.precio}}</p>
         </b>
     </div>
-    <button class="btn btn-primary" (click)="comprar(articulo.id)">Comprar articulo</button>
-    <button [class]="botonActivo ? 'btn btn-primary' :  'btn btn-danger'" 
-            [disabled]="botonActivo">Comprar</button>
+    <button class="btn btn-primary">Comprar articulo</button>
 </div>
-</div>
-<button (click)="verEvent($event)">Ver evento</button>
-
-<ul>
-    <li *ngFor="let a of articulos">{{a.nombre}}</li>
-</ul>
+</div>-->
