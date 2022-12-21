@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Articulo } from '../Modelos/articulo';
 
 
 @Component({
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./articulo.component.css']
 })
 export class ArticuloComponent {
+@Input() articulo!:Articulo;
+@Output() borraDesdeHijo=new EventEmitter<String>();
 
-  
+borrarArticulo(id:String){
+  this.borraDesdeHijo.emit(id);
+}
 }

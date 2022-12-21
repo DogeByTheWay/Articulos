@@ -11,16 +11,6 @@
 
   <br>
   <div id="contenedor" class="row row-cols-1 row-cols-md-6 g-4">
-    <div class="card col-4" *ngFor="let articulo of articulos" [id]="articulo.id" style="width: 18rem;">
-        <img src="../assets/{{articulo.id}}.jpg" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">{{articulo.nombre}}</h5>
-            <p class="card-text">{{articulo.descripcion}}</p>
-            <b>
-                <p class="card-text text-center">{{articulo.precio}}</p>
-            </b>
-        </div>
-        <button class="btn btn-primary" (click)="borrarArticulo(articulo.id)">Borrar</button>
-    </div>
-    </div>
+      <app-articulo *ngFor="let articulo of articulos" [articulo]="articulo" (borraDesdeHijo)="borrarArticulo($event)"></app-articulo>
+  </div>
 <router-outlet></router-outlet>
